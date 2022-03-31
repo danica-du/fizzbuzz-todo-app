@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './styles/App.css';
+import Header from './Header.js';
+import TaskList from './TaskList.js';
+import {generateUniqueID} from "web-vitals/dist/modules/lib/generateUniqueID";
 
-function App() {
+function App(props) {
+  const [data, setData] = useState(props.initialData);
+
+  function handleTaskCreate(newContent) {
+    const newTask = {
+      id: generateUniqueID(),
+      content: newContent,
+      isCompleted: false
+    }
+    setData((data) => [...data, newTask])
+  }
+
+  function handleTaskDelete(taskID) {
+    setData(data.filter((task) => {
+      return task.id !== taskID
+    }))
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='wrapper'>
+      <div className='app-frame'>
+        <Header onTaskCreate={handleTaskCreate} />
+        <TaskList data={data} onTaskDelete={handleTaskDelete} />
+      </div>
     </div>
   );
 }
