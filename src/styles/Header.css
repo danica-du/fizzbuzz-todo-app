@@ -1,0 +1,36 @@
+.header-container {
+  height: 104px;
+  padding-top: 24px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.new-task-container {
+  display: flex;
+  height: 60px;
+  margin: 16px 0 0 16px;
+  text-align: center;
+  width: 100%;
+}
+
+.new-task-container input {
+  border: none;
+  border-radius: 6px 0 0 6px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  height: 32px;
+  padding-left: 8px;
+  width: 280px;
+}
+
+.add-btn {
+  background-color: #efefef;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  height: 34px;
+  padding: 4px;
+  /* font-size: 18px; */
+  margin-right: auto;
+  width: 48px;
+}

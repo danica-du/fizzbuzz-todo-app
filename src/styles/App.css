@@ -1,0 +1,10 @@
+.wrapper {
+  background-color: aliceblue;
+  height: 100vh;
+  text-align: center;
+}
+
+.app-frame {
+  margin: auto;
+  width: 640px;
+}
