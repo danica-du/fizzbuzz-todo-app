@@ -4,27 +4,27 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const initialData = [
-  {
-    id: 123,
-    content: "Do homework",
-    isCompleted: true,
-  },
-  {
-    id: 456,
-    content: "Make dinner",
-    isCompleted: false,
-  },
-  {
-    id: 789,
-    content: "Get oil change",
-    isCompleted: true,
-  }
-]
+// const initialData = [
+//   {
+//     id: 123,
+//     content: "Do homework",
+//     isCompleted: true,
+//   },
+//   {
+//     id: 456,
+//     content: "Make dinner",
+//     isCompleted: false,
+//   },
+//   {
+//     id: 789,
+//     content: "Get oil change",
+//     isCompleted: true,
+//   }
+// ]
 
 ReactDOM.render(
   <React.StrictMode>
-    <App initialData={initialData} />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

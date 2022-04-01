@@ -8,7 +8,6 @@ import axios from "axios";
 // Free fake API for testing: https://jsonplaceholder.typicode.com/todos/
 
 function App(props) {
-  // const [data, setData] = useState(props.initialData);
   const [data, setData] = useState([]);
 
   useEffect(() => {
