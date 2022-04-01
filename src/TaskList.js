@@ -5,6 +5,7 @@ function TaskList(props) {
   return (
     <div className='tasklist-wrapper'>
       {props.data.map((task) => <Task key={task.id}
+                                      onToggleTaskComplete={props.onToggleTaskComplete}
                                       onTaskDelete={props.onTaskDelete}
                                       {...task} />)
       }

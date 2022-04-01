@@ -2,6 +2,7 @@
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

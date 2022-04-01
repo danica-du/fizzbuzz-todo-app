@@ -16,6 +16,12 @@ function App(props) {
     setData((data) => [...data, newTask])
   }
 
+  function toggleTaskComplete(taskID) {
+    setData(data.map((task) =>
+      (task.id === taskID) ? {...task, ['isCompleted']: !task.isCompleted} : {...task}
+    ))
+  }
+
   function handleTaskDelete(taskID) {
     setData(data.filter((task) => {
       return task.id !== taskID
@@ -26,7 +32,7 @@ function App(props) {
     <div className='wrapper'>
       <div className='app-frame'>
         <Header onTaskCreate={handleTaskCreate} />
-        <TaskList data={data} onTaskDelete={handleTaskDelete} />
+        <TaskList data={data} onToggleTaskComplete={toggleTaskComplete} onTaskDelete={handleTaskDelete} />
       </div>
     </div>
   );
