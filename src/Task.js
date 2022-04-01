@@ -3,10 +3,10 @@ import './styles/Task.css';
 function Task(props) {
   return (
     <div className='task-container'>
-      <span style={{ textDecoration: props.isCompleted ? "line-through" : "" }}
+      <span style={{ textDecoration: props.completed ? "line-through" : "" }}
             onClick={() => props.onToggleTaskComplete(props.id)}
       >
-        {props.content}
+        {props.title}
       </span>
       <button className='delete-btn'
               onClick={() => props.onTaskDelete(props.id)}>
