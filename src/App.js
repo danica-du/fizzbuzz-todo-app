@@ -34,9 +34,6 @@ function App(props) {
     // The data won't actually be updated on the server because this API
     // is fake and for testing only, but this would be the syntax
     axios.post("https://jsonplaceholder.typicode.com/todos/", newTask)
-    .then((res) => {
-      console.log("successfully created")
-    })
     .catch((err) => {
       console.error(err)
     })
