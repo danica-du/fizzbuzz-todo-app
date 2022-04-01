@@ -20,7 +20,11 @@ function Header(props) {
             value={text}
             onChange={(e) => setText(e.target.value)}
           />
-          <button className='add-btn'>Add</button>
+          <button className='add-btn'
+                  disabled={!text}
+          >
+            Add
+          </button>
         </form>
       </div>
     </div>
