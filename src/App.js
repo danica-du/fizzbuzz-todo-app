@@ -8,7 +8,8 @@ import axios from "axios";
 // Free fake API for testing: https://jsonplaceholder.typicode.com/todos/
 
 function App(props) {
-  const [data, setData] = useState(props.initialData);
+  // const [data, setData] = useState(props.initialData);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/todos/", {
@@ -19,6 +20,9 @@ function App(props) {
     .then((res) => {
       setData(res.data)
     })
+    .catch((err) => {
+      console.error(err)
+    })
   }, [])
 
   function handleTaskCreate(newContent) {
@@ -27,6 +31,17 @@ function App(props) {
       title: newContent,
       completed: false
     }
+
+    // The data won't actually be updated on the server because this API
+    // is fake and for testing only, but this would be the syntax
+    axios.post("https://jsonplaceholder.typicode.com/todos/", newTask)
+    .then((res) => {
+      console.log("successfully created")
+    })
+    .catch((err) => {
+      console.error(err)
+    })
+
     setData((data) => [...data, newTask])
   }
 
