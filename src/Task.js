@@ -2,10 +2,9 @@ import './styles/Task.css';
 
 function Task(props) {
   return (
-    <div className='task-container'
-      onClick={() => props.onToggleTaskComplete(props.id)}
-    >
+    <div className='task-container'>
       <span style={{ textDecoration: props.isCompleted ? "line-through" : "" }}
+            onClick={() => props.onToggleTaskComplete(props.id)}
       >
         {props.content}
       </span>

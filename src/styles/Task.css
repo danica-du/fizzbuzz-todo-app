@@ -2,13 +2,16 @@
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0px 16px 16px 16px;
   padding: 16px;
   font-size: 14px;
+}
+
+.task-container span {
+  cursor: pointer;
 }
 
 .delete-btn {
